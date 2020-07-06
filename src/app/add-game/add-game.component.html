@@ -1,0 +1,28 @@
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Store Page URL</mat-label>
+    <input matInput placeholder="Paste your link here" autocomplete="off" [(ngModel)]="storePageUrl">
+  </mat-form-field>
+  <button mat-raised-button id="fetch-button" (click)="parseStorePageUrl()">Fetch</button>
+</div>
+<img src="{{gameForm.controls['imgUrl'].value}}"/>
+<form [formGroup]="gameForm" (ngSubmit)="submitGameForm()">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput autocomplete="off" formControlName="name">
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>Release date</mat-label>
+    <input matInput autocomplete="off" formControlName="releaseDate">
+  </mat-form-field><br>
+  <section>
+    <mat-checkbox formControlName="onPS4" color="primary">PS4</mat-checkbox>
+    <mat-checkbox formControlName="onPS3" color="primary">PS3</mat-checkbox>
+    <mat-checkbox formControlName="onPSV" color="primary">PSV</mat-checkbox>
+    <mat-checkbox formControlName="onSwitch" color="primary">Switch</mat-checkbox>
+    <mat-checkbox formControlName="onXbox" color="primary">Xbox</mat-checkbox>
+    <mat-checkbox formControlName="onSteam" color="primary">Steam</mat-checkbox>
+  </section>
+  <br>
+  <button mat-raised-button color="primary">ADD</button>
+</form>

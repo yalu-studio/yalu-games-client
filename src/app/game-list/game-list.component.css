@@ -1,0 +1,57 @@
+.container {
+  padding: 20px;
+}
+
+.game-card {
+  width: 250px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.game-card img {
+  height: 140px;
+  object-fit: cover;
+}
+
+#completed_icon{
+  margin-left: 5px;
+  height: 17px;
+  width: 17px;
+  color: green;
+  font-weight: bolder;
+  font-size: small;
+}
+
+.platform-icon {
+  font-size: 11px;
+  /* font-weight: bold; */
+  color: white;
+  border-radius: 4px;
+  padding: 3px;
+  float: right;
+  margin: 1px;
+  text-decoration: none;
+}
+
+#game-list {
+  margin-top: 20px;
+}
+
+#release-time {
+  font-size: 11px;
+}
+#steam-icon{
+  background-color: rgb(27, 44, 61);
+}
+
+#ps4-icon{
+  background-color: rgb(134, 99, 219);
+}
+
+#ps3-icon {
+  background-color: rgb(238, 84, 99);
+}
+
+#psv-icon {
+  background-color: rgb(30, 171, 231);
+}

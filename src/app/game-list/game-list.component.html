@@ -1,0 +1,21 @@
+<div class="container">
+  <div>
+    <button mat-raised-button (click)="openDialog()" id="add-game-button">ADD A GAME</button>
+  </div>
+  <div id="game-list" *ngIf="this.games.length > 0">
+    <mat-card *ngFor="let game of filteredGames" class="game-card">
+      <img mat-card-image src="{{game.img_url}}" (click)="onGameCardClicked(game)">
+      <mat-card-content>
+        <b>{{game.name}}</b>
+        <mat-icon *ngIf="game.completed" id="completed_icon">done_outline</mat-icon>
+        <p>
+          <span *ngIf="game.release_date" id="release-time">{{game.release_date | date}}</span>
+          <a *ngIf="game.platforms.steam" id="steam-icon" class="platform-icon">STEAM</a>
+          <a *ngIf="game.platforms.psv" id="psv-icon" class="platform-icon">PSV</a>
+          <a *ngIf="game.platforms.ps3" id="ps3-icon" class="platform-icon">PS3</a>
+          <a *ngIf="game.platforms.ps4" id="ps4-icon" class="platform-icon">PS4</a>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

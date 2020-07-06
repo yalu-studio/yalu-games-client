@@ -1,0 +1,11 @@
+img {
+  width: 100%;
+  /* max-width: 400px; */
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+b {
+  margin-right: 10px;
+}

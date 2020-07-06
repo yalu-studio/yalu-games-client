@@ -1,0 +1,14 @@
+<form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput autocomplete="off" formControlName="email" required>
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" autocomplete="off" formControlName="password" required>
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </mat-form-field><br>
+  <button mat-raised-button color="primary">Login</button>
+  <button type="button" mat-raised-button color="primary" [routerLink]="'/signup'">Register</button>
+</form>
+
