@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router'
 import { AuthService } from '../shared/auth.service';
 
 @Component({
@@ -10,25 +11,31 @@ import { AuthService } from '../shared/auth.service';
 export class LoginComponent implements OnInit {
 
   hide: Boolean = true;
-
-  loginForm: FormGroup
+  loginForm: FormGroup;
+  returnUrl: string;
 
   constructor(public fb: FormBuilder,
-              private authApi: AuthService) { }
+              private authService: AuthService,
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       email: [''],
       password: ['']
     })
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   submitLoginForm(){
     if(this.loginForm.valid) {
-      this.authApi.login({
+      this.authService.login({
         email: this.loginForm.controls['email'].value,
         password: this.loginForm.controls['password'].value
-      }).subscribe(res => console.log(res))
+      }).subscribe(res => {
+        this.authService.setSession(res)
+        this.router.navigateByUrl(this.returnUrl);
+      })
     }
   }
 
