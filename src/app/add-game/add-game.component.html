@@ -13,7 +13,9 @@
   </mat-form-field><br>
   <mat-form-field>
     <mat-label>Release date</mat-label>
-    <input matInput autocomplete="off" formControlName="releaseDate">
+    <input matInput [matDatepicker]="picker" formControlName="releaseDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field><br>
   <section>
     <mat-checkbox formControlName="onPS4" color="primary">PS4</mat-checkbox>

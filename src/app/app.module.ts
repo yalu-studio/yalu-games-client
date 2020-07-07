@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { AddGameComponent } from './add-game/add-game.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { ApiService } from './shared/api.service';
 import { EditGameComponent } from './edit-game/edit-game.component';
@@ -33,7 +35,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     AngularMaterialModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
