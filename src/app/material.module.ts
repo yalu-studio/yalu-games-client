@@ -10,6 +10,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 // import { MatPaginatorModule } from '@angular/material/paginator';
 
 // import {
@@ -19,8 +22,6 @@ import { MatIconModule } from '@angular/material/icon';
 //    MatGridListModule,
 //    MatSelectModule,
 //    MatRadioModule,
-//    MatDatepickerModule,
-//    MatNativeDateModule,
 //    MatChipsModule,
 //    MatTooltipModule,
 //    MatTableModule,
@@ -39,14 +40,15 @@ import { MatIconModule } from '@angular/material/icon';
       MatCheckboxModule,
       MatButtonToggleModule,
       MatIconModule,
+      MatSnackBarModule,
+      MatDatepickerModule,
+      MatNativeDateModule
       // MatSidenavModule,
       // MatBadgeModule,
       // MatListModule,
       // MatGridListModule,
       // MatSelectModule,
       // MatRadioModule,
-      // MatDatepickerModule,
-      // MatNativeDateModule,
       // MatChipsModule,
       // MatTooltipModule,
       // MatTableModule,
@@ -62,13 +64,15 @@ import { MatIconModule } from '@angular/material/icon';
       MatCheckboxModule,
       MatButtonToggleModule,
       MatIconModule,
+      MatSnackBarModule,
+      MatDatepickerModule,
+      MatNativeDateModule
       // MatSidenavModule,
       // MatBadgeModule,
       // MatListModule,
       // MatGridListModule,
       // MatSelectModule,
       // MatRadioModule,
-      // MatDatepickerModule,
       // MatChipsModule,
       // MatTooltipModule,
       // MatTableModule,

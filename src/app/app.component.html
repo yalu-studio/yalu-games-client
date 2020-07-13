@@ -1,7 +1,8 @@
 <mat-toolbar color="primary" class="header">
   <a mat-button [routerLink]="''">Home</a>
   <a mat-button [routerLink]="'/game'">Game</a>
-  <a mat-button *ngIf="!isLoggedIn">Login</a>
+  <span class="spacer"></span>
+  <a mat-button *ngIf="!isLoggedIn" [routerLink]="'/login'">Login</a>
   <a mat-button (click)="logout()" *ngIf="isLoggedIn">Logout</a>
 </mat-toolbar>
 <router-outlet></router-outlet>
