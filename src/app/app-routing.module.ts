@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'profile/:id', component: UserProfileComponent, canActivate: [AuthGuard] },
   { path: 'signup', component: RegisterComponent },
-  { path: 'game', component: GameListComponent},
+  { path: 'game', component: GameListComponent },
 
   { path: '**', redirectTo: ''}
 ]

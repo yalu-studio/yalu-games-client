@@ -40,6 +40,11 @@ export class LoginComponent implements OnInit {
         //   this.openSnackBar(res.message)
         // }
         this.authService.setSession(res)
+      },
+      err => {
+        console.log(err)
+      },
+      () => {
         this.router.navigateByUrl(this.returnUrl);
       })
     }

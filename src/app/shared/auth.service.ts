@@ -15,7 +15,7 @@ export class AuthService {
 
   login(data) {
     const API_URL = `${this.endpoint}/login`
-    return this.http.post(API_URL, data)
+    return this.http.post(API_URL, data, {headers: this.headers})
               // .subscribe(res => this.setSession(res))
   }
 
@@ -39,7 +39,9 @@ export class AuthService {
   }
 
   public isLoggedIn() {
-    return new Date() < this.getExpiration();
+    const status = new Date() < this.getExpiration();
+    this.loginStatusChange.next(status)
+    return status
   }
 
 }
